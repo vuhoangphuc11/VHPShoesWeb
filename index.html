@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/menucon.css">
+    <link rel="stylesheet" href="css/bai2.css">
+    <link rel="stylesheet" href="css/bai1.css">
+    <link rel="stylesheet" href="css/trangchu.css">
+    <script src="js/dongho.js"></script>
+    <script>
+
+        /*
+        function over()
+        {
+            document.hinh.src = "../trang_chu/image/phuc4.jpg"
+        }
+        function out()
+        {
+            document.hinh.src = "../trang_chu/image/phuc1.jpg"
+        }
+        */
+
+        
+
+        //1.khai bao bien toan cuc
+        var mang = []; //khai bao mang de chua cac doi tuong hinh
+        var current = 0; //vi tri hien hanh
+        var n = 5; //so luong hinh
+        
+        //2.ham load cac hinh anh vao mang
+        function load()
+        {
+            for(var i = 0; i <= n; i++ )
+            {
+                mang[i] = new Image(); // cap phat moi phan tu cua mang
+                mang[i].src = "image/phuc"+ i +".jpg";
+            }
+        }
+        //3. ham first tra ve dau tien cho current = 0
+        function first()
+        {
+            current = 0;
+            document.getElementById("hinh").src = mang[current].src //hien thi anh len
+        }
+        //4. ham previos tra ve truoc cho current = -1
+        function previous()
+        {
+            if(current > 0){
+            current = current -1;
+            
+            }
+            document.getElementById("hinh").src = mang[current].src //hien thi anh len
+        }
+        //5. ham next tra ve truoc cho current = +1
+        function next()
+        {
+            if(current < mang.length - 1){
+            current = current +1;
+            
+            }
+            document.getElementById("hinh").src = mang[current].src //hien thi anh len
+        }
+        //6. ham last tra ve gia tri cuoi cung cho current = mang.length - 1
+        function last()
+        {
+            current = mang.length - 1; //hinh cuoi cung cua mang
+            document.getElementById("hinh").src = mang[current].src; //hien thi anh len
+
+        }
+        function auto()
+        {
+            next();
+            setInterval("auto();",1000);
+        }
+
+
+
+
+        
+    </script>
+    <style>
+    input{
+        width: 80px;
+        height: 40px;
+        background-color: orange;
+        border-radius: 10px;
+    }
+    img{
+        border-radius: 5px;
+    }
+    </style>
+</head> 
+
+<body onclick="load()" onload="hienthiDongHo();auto();">
+
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v6.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="102875627991101" theme_color="#ff7e29"
+        logged_in_greeting="Chào bạn ! Mình có thể giúp gì cho bạn"
+        logged_out_greeting="Chào bạn ! Mình có thể giúp gì cho bạn">
+    </div>
+
+
+
+
+    <header>
+
+        <center>
+            <div id="dongho">
+            </div>
+        </center>
+
+        <div class="sdt">
+            Liên hệ: 0969141969
+        </div>
+        <div class="iconsdt">
+            <img src="image/phone2.png" alt="">
+        </div>
+        <div class="email">
+            Mail: phucvhps12860@fpt.edu.vn
+        </div>
+        <div class="iconemail">
+            <img src="image/mail2.png" alt="">
+        </div>
+
+
+
+    </header>
+    <nav>
+
+        <ul class="h-menu">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="gioithieu.html">Giới thiệu</a></li>
+            <li><a href="lienhe.html">Liên hệ</a></li>
+            <li><a href="sanpham.html">Sản phẩm</a></li>
+            <li><a href="spagiay.html">Spa giày</a></li>
+            <li><a href="sale.html">Sale</a></li>
+            <li><a href="tienich.html">Tiện ích</a></li>
+            <li><a href="giohang.html">Giỏ hàng</a></li>
+        </ul>
+
+    </nav>
+    <article>
+        
+        <center>
+            <h1 style=" color: dodgerblue; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">BẢNG TIN HOANGPHUCSNEAKER</h1>
+            <img id="hinh" src="image/phuc0.jpg" alt="" height = 650px; width = 1050px; />
+
+        <br>
+        <br>
+        <input type="button" value="First" onclick="first();">
+        <input type="button" value="Previous" onclick="previous();">
+        <input type="button" value="Next" onclick="next();">
+        <input type="button" value="Last" onclick="last();">
+        <br>
+        <br>
+        <hr>
+       
+        <h1 style="color: dodgerblue; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">HÀNG HOT !!!</h1>
+        <div class="col-25">
+            <div class="prod">
+            <div class="name">Yeezy 700</div>
+            <img class="image" src="image/yz7001.jpg" alt="">
+            <div class="price">$ 114</div>
+            <div class="icons">
+                <img src="image/giohang.png" alt="">
+                <img src="image/thu.png" alt="">
+                <img src="image/tim.png" alt="">
+            </div>
+            <img class="new-icon" src="image/new.png" alt="">
+            </div>
+        </div>
+        <div class="col-25">
+            <div class="prod">
+            <div class="name">Nike Jordan 1</div>
+            <img class="image" src="image/jordan1.jpg" alt="">
+            <div class="price">$ 114</div>
+            <div class="icons">
+                <img src="image/giohang.png" alt="">
+                <img src="image/thu.png" alt="">
+                <img src="image/tim.png" alt="">
+            </div>
+            <img class="new-icon" src="image/new.png" alt="">
+            </div>
+        </div>
+        <div class="col-25">
+            <div class="prod">
+            <div class="name">Balenciaga Track</div>
+            <img class="image" src="image/balen.jpg" alt="">
+            <div class="price">$ 114</div>
+            <div class="icons">
+                <img src="image/giohang.png" alt="">
+                <img src="image/thu.png" alt="">
+                <img src="image/tim.png" alt="">
+            </div>
+            <img class="new-icon" src="image/new.png" alt="">
+            </div>
+        </div>
+        <div class="col-25">
+            <div class="prod">
+            <div class="name">MLB</div>
+            <img class="image" src="image/mlb.jpg" alt="">
+            <div class="price">$ 114</div>
+            <div class="icons">
+                <img src="image/giohang.png" alt="">
+                <img src="image/thu.png" alt="">
+                <img src="image/tim.png" alt="">
+            </div>
+            <img class="new-icon" src="image/new.png" alt="">
+            </div>
+        </center>
+    </article>
+    <aside>
+        <ul class="vmenu">
+            <li><a href="DongHo.html">Nike</a></li>
+            <li><a href="sanpham.html">Adidas</a></li>
+            <li><a href="sanpham.html">Converse</a></li>
+            <li><a href="sanpham.html">Vans</a></li>
+            <li><a href="sanpham.html">New Balance</a></li>
+            <li><a href="sanpham.html">Prophere</a></li>
+            <li><a href="sanpham.html">Human</a></li>
+            <li><a href="sanpham.html">Ultra Boost</a></li>
+        </ul>
+    </aside>
+    <footer>
+        <div class="logo1">
+            <img src="image/logo1.png" alt="">
+        </div>
+        <div class="bct">
+            <img src="image/bct1.png" alt="">
+        </div>
+
+        <div class="htkh">
+            <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+            Chăm sóc khách hàng <br><br>
+            Thanh toán <br><br>
+            Hướng dẫn mua hàng <br>
+        </div>
+
+        <div class="cs">
+            <h3>CHÍNH SÁCH</h3>
+            Chế độ bảo hành <br><br>
+            Chính sách đổi hàng <br><br>
+            Bảo mật thông tin <br>
+        </div>
+
+        <div class="tnlh">
+            <h3>THÔNG TIN LIÊN HỆ</h3>
+            hoangphucsneaker.000webhostapp.com Trang Thông Tin Chính Thứ <br><br>
+            ⛪ Địa chỉ: 256/8, Phan Huy Ích, phường 12, Quận Gò Vấp, Thành phố Hồ Chí Minh <br><br>
+            Email : cskh.hoangphucsneaker.vn@gmail.com <br><br>
+            ☎️ Hotline Bán Hàng: 0969141969 <br><br>
+            ☎️ Hotline CSKH: 0372393505 <br>
+        </div>
+
+        <div class="cp ">
+            Copyright © 2020 hoangphucsneaker.000webhostapp.com
+        </div>
+    </footer>
+</body>
+
+</html>

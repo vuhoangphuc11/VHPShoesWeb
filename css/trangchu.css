@@ -1,0 +1,162 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+header{
+    background-image: url('../image/biafinal.jpg');
+    background-size: 100% 100%;
+    position: relative;
+    height: 400px;
+}
+nav{
+    border: 5px solid orangered;
+    height: 40px;
+    background-color: orange;
+    border-radius: 5px;
+
+}
+
+footer{
+    position: relative;
+    background-color: orange;
+    text-align: center;
+    border-top: 5px solid orange;
+    height: 400px;
+    font-variant: small-caps;
+    clear: both;
+    color: dodgerblue;
+    background-image: url('../image/ft.jpg');
+    background-size: 100% 100%;
+}
+article{
+    
+    min-height: 900px;
+    width: 75%;
+    background-color: white;
+    float: left;
+}
+aside {
+    min-height: 1100px;
+    width: 25%;
+    float: right;
+    background-color: whitesmoke;
+    
+}
+
+
+a:hover{
+    color: orange;
+    background-color: white;
+}
+
+.maintital{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color:dodgerblue;
+}
+.main{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+.subtital{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    color: dodgerblue;
+    text-align: center;
+}
+a{
+    padding: 0px 15px;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    line-height: 40px;
+}
+
+.sdt{
+    font-size: 15px;
+    color: dodgerblue;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    position: absolute;
+    top: 10px;
+    right: 300px;
+}
+.email{
+    color: dodgerblue;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.iconsdt{
+    position: absolute;
+    top: 10px;
+    right: 440px;
+}
+.iconemail{
+    position: absolute;
+    top: 10px;
+    right: 250px;
+}
+.logo{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+h2{
+    font-variant: small-caps;
+    color:orange;
+}
+.htkh{
+    position: absolute;
+    right: 50px;
+    float: right;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    
+}
+.cs{
+    position: absolute;
+    right: 400px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+}
+.logo1{
+    float: left;
+}
+.tnlh{
+    position: absolute;
+    right: 600px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+}
+.cp{
+    position: absolute;
+    bottom: 20px;
+    right: 500px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+}
+.bct{
+    position:absolute;
+    bottom: 20px;
+    left:50px;
+}
+.lmt{
+    text-align: center;
+}
+#dongho{
+    position: absolute;
+    left: 670px;
+    top: 5px;
+    box-shadow: 3px 3px 3px blue;  
+    font-size: 20px;
+    color: dodgerblue;
+    width: 130px;
+    box-shadow: dodgerblue;
+    border :solid 2px dodgerblue;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;   
+}
+
+
+
+

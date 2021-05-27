@@ -1,0 +1,27 @@
+.vmenu{
+
+    padding: 0px;
+    margin: 5px;
+    list-style: none;   
+    border: 5px solid orangered;
+    box-shadow: 0 0 2px gray;
+    background-color: orange;
+    border-radius: 5px;
+}
+.vmenu a{
+    background: url('../image/tien1.png') no-repeat 10px center;
+    display: block;
+    border-bottom: 1px solid orangered;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: large;
+    text-decoration: none;
+    padding: 8px 5px 8px 30px;
+}
+.vmenu a:hover{
+    background: url('../image/tichxanh.jpg') no-repeat 10px center;
+    border-bottom: 1px dotted white;
+    background-color: white;
+    color: orange;
+    font-weight: bold;
+}

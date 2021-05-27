@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       
+
+        
+
+
+
+
+//1. Khai báo biến toàn cục 
+var mang = [];//khai báo mảng để chứa các hình
+var current = 0; //vị trí hiện hành
+var N = 5; // số lượng hình
+//2. Hàm load các hình ảnh vào mảng 
+function load(){
+    for( var i =0 ; i<=N ;i++)
+    {
+        mang[i] = new Image(); //Cấp phát một phần tử của mảng là một đối tượng hình
+        mang[i].src = "../image/phuc"+i+".jpg";
+    }
+}
+//3. Hàm về đầu 
+function first()
+{
+    current = 0;
+    document.getElementById("hinh").src = mang[current].src;//Hiển thị ảnh lên ,
+}
+//4.Hàm về cuối
+function last()
+{
+    current = mang.length - 1; //hình cuối cùng của mảng 
+    document.getElementById("hinh").src = mang[current].src;//Hiển thị ảnh lên ,
+}
+//về trước
+function previous()
+{
+    if(current > 0)
+    {
+        current = current-1; //lấy hình trước đó
+    }
+    document.getElementById("hinh").src = mang[current].src;//Hiển thị ảnh lên ,
+}
+//về sau
+function next()
+{
+    if(current < mang.length-1)
+    {
+       current = current+1; //lấy hình sau  
+    }
+    document.getElementById("hinh").src = mang[current].src;//Hiển thị ảnh lên ,
+}
+//7.chạy từ động
+function auto()
+{
+    next();
+    setInterval("auto();",8000); // cứ 1 giây gọi hàm auto()
+}
+
+</script>
+    
+</head>
+<body onload="load();auto();">
+  
+    <h1 style=" color: dodgerblue; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">BẢNG TIN HOANGPHUCSNEAKER</h1>
+    <img id="hinh" src="../trang_chu/image/phuc1.jpg" alt="" height = 650px; width = 1050px; />
+
+<br>
+<br>
+<input type="button" value="First" onclick="first();">
+<input type="button" value="Previous" onclick="previous();">
+<input type="button" value="Next" onclick="next();">
+<input type="button" value="Last" onclick="last();">
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/menucon.css">
+    <link rel="stylesheet" href="css/bai2.css">
+    <link rel="stylesheet" href="css/bai1.css">
+    <link rel="stylesheet" href="css/lienhe.css">
+    <script src="js/giohang.js"></script>
+
+    <script>
+        function hienthiDongHo() {
+            //1. lấy ngày giờ hệ thống trên máy tính của bạn
+            var ngay = new Date();
+
+            //2. lấy ra giờ, phút, giây
+            var gio = ngay.getHours();  // lấy giờ
+            var phut = ngay.getMinutes();  // lấy phút
+            var giay = ngay.getSeconds();  // lấy giây
+
+            //3. Nếu gio, phut, giay mà nhỏ hơn 10 thì cộng số "0" phía trước cho đẹp
+            if (gio < 10) {
+                gio = "0" + gio;
+            }
+            if (phut < 10) {
+                phut = "0" + phut;
+            }
+            if (giay < 10) {
+                giay = "0" + giay;
+            }
+            //4. Hiện thị đồng hồ gio, phut , giay tại vị trị thẻ ...  <div id="dongho">
+            document.getElementById("dongho").innerHTML = gio + " : " + phut + " : " + giay;
+
+            //5. Muốn cứ 1 giay (1000mili giây) thì gọi lại hàm hienthiDongHo() để lấy giờ mới.
+            //setInterval("hienthiDongHo()",1000);
+            setInterval("hienthiDongHo()", 1000);
+        }
+    </script>
+    <style>
+        table{
+            color: white;
+            width: 500px;
+            height: 100px;
+            border:solid 5px orangered;
+            border-radius: 15px;
+            background-color: orange;
+            text-align: center;
+        }
+        td{
+            border-radius: 15px;
+        }
+        button{
+            width: 100px;
+            height: 50px;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            border:solid blue 5px;
+            background-color: dodgerblue;
+           
+        }
+        button:hover{
+             background-color:  greenyellow;
+        }
+        h3{
+            font-family:monospace;
+        }
+    </style>
+</head>
+<body onload="hienthiDongHo();">
+
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v6.0'
+    });
+  };
+
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=setup_tool
+  page_id="102875627991101"
+theme_color="#ff7e29"
+logged_in_greeting="Chào bạn ! Mình có thể giúp gì cho bạn"
+logged_out_greeting="Chào bạn ! Mình có thể giúp gì cho bạn">
+</div>
+
+
+
+
+
+
+    <header>
+
+        <center>
+            <div id="dongho">
+            </div>
+        </center>
+
+        <div class="sdt">
+            Liên hệ: 0969141969
+        </div>
+        <div class="iconsdt">
+        <img  src="image/phone2.png" alt="">
+        </div>
+        <div class="email">
+            Mail: phucvhps12860@fpt.edu.vn
+        </div>
+
+        <div class="iconemail">
+            <img src="image/mail2.png" alt="">
+        </div>
+        
+
+
+        
+    </header>
+    <nav>
+        <ul class="h-menu">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="gioithieu.html">Giới thiệu</a></li>
+            <li><a href="lienhe.html">Liên hệ</a></li>
+            <li><a href="sanpham.html">Sản phẩm</a></li>
+            <li><a href="spagiay.html">Spa giày</a></li> 
+            <li><a href="sale.html">Sale</a></li>
+            <li><a href="tienich.html">Tiện ích</a></li>
+            <li><a href="giohang.html">Giỏ hàng</a></li>
+        </ul>
+    </nav>
+    <article>
+        <center>
+            <h3>DANH MỤC HÀNG HÓA</h3>
+            <table border="1" class="giohang">
+                <tr>
+                    <td>Yeezy 350</td>
+                    <td>$2700</td>
+                    <td><button onclick="them(this)">Thêm</button></td>
+                </tr>
+                <tr>
+                    <td>Yeezy 700</td>
+                    <td>$1500</td>
+                    <td><button onclick="them(this)">Thêm</button></td>
+                </tr>
+                <tr>
+                    <td>Nike Jordan 1</td>
+                    <td>$1200</td>
+                    <td><button onclick="them(this)">Thêm</button></td>
+                </tr>
+                <tr>
+                    <td>Nike air force 1</td>
+                    <td>$1700</td>
+                    <td><button onclick="them(this)">Thêm</button></td>
+                </tr>
+                <tr>
+                    <td>Adidas Prophere</td>
+                    <td>$1700</td>
+                    <td><button onclick="them(this)">Thêm</button></td>
+                </tr>
+            </table>
+        
+            <h3>GIỎ HÀNG CỦA BẠN</h3>
+        <h3 id="empty">Bạn chưa chọn mặt hàng nào</h3>
+        
+        <div id="not-empty" style="display:none;">
+            <table border="1" id="cart"></table>
+        
+            <h3>TỔNG SỐ TIỀN: $<span id="tong">0</span></h3>
+        </div>
+        </center>
+
+        
+
+    </article>
+    <aside><ul class="vmenu">
+        <li><a href="sanpham.html">Nike</a></li>
+        <li><a href="sanpham.html">Adidas</a></li>
+        <li><a href="sanpham.html">Converse</a></li>
+        <li><a href="sanpham.html">Vans</a></li>
+        <li><a href="sanpham.html">New Balance</a></li>
+        <li><a href="sanpham.html">Prophere</a></li>
+        <li><a href="sanpham.html">Human</a></li>
+        <li><a href="sanpham.html">Ultra Boost</a></li>
+    </ul></aside>
+    <footer>
+        <div class="logo1">
+            <img src="image/logo1.png" alt="">
+            </div> 
+
+    <div class="bct">
+        <img src="image/bct1.png" alt="">
+    </div>
+        
+    <div class="htkh">
+        <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+        Chăm sóc khách hàng <br><br>
+        Thanh toán <br><br>
+        Hướng dẫn mua hàng <br>
+    </div>
+
+    <div class="cs">
+        <h3>CHÍNH SÁCH</h3> 
+        Chế độ bảo hành <br><br>
+        Chính sách đổi hàng <br><br>
+        Bảo mật thông tin <br>  
+    </div>
+    
+    <div class="tnlh">
+        <h3>THÔNG TIN LIÊN HỆ</h3>
+        hoangphucsneaker.000webhostapp.com Trang Thông Tin Chính Thứ <br><br>
+        ⛪ Địa chỉ: 256/8, Phan Huy Ích, phường 12, Quận Gò Vấp, Thành phố Hồ Chí Minh <br><br>
+        Email : cskh.hoangphucsneaker.vn@gmail.com <br><br>
+        ☎️ Hotline Bán Hàng: 0969141969 <br><br>
+        ☎️ Hotline CSKH: 0372393505 <br>
+    </div>
+    
+    <div class="cp ">
+        Copyright © 2020 hoangphucsneaker.000webhostapp.com
+    </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/menucon.css">
+    <link rel="stylesheet" href="css/bai2.css">
+    <link rel="stylesheet" href="css/bai1.css">
+    <link rel="stylesheet" href="css/gioithieu.css">
+
+    <script>
+        function hienthiDongHo() {
+            //1. lấy ngày giờ hệ thống trên máy tính của bạn
+            var ngay = new Date();
+
+            //2. lấy ra giờ, phút, giây
+            var gio = ngay.getHours();  // lấy giờ
+            var phut = ngay.getMinutes();  // lấy phút
+            var giay = ngay.getSeconds();  // lấy giây
+
+            //3. Nếu gio, phut, giay mà nhỏ hơn 10 thì cộng số "0" phía trước cho đẹp
+            if (gio < 10) {
+                gio = "0" + gio;
+            }
+            if (phut < 10) {
+                phut = "0" + phut;
+            }
+            if (giay < 10) {
+                giay = "0" + giay;
+            }
+            //4. Hiện thị đồng hồ gio, phut , giay tại vị trị thẻ ...  <div id="dongho">
+            document.getElementById("dongho").innerHTML = gio + " : " + phut + " : " + giay;
+
+            //5. Muốn cứ 1 giay (1000mili giây) thì gọi lại hàm hienthiDongHo() để lấy giờ mới.
+            //setInterval("hienthiDongHo()",1000);
+            setInterval("hienthiDongHo()", 1000);
+        }
+
+
+
+        function over()
+        {
+            document.hinh.src = "image/store1.jpg"
+        }
+        function out()
+        {
+            document.hinh.src = "image/store.jpg"
+        }
+    </script>
+    <style>
+
+    </style>
+</head>
+
+<body onload="hienthiDongHo();">
+
+
+
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v6.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="102875627991101" theme_color="#ff7e29"
+        logged_in_greeting="Chào bạn ! Mình có thể giúp gì cho bạn"
+        logged_out_greeting="Chào bạn ! Mình có thể giúp gì cho bạn">
+    </div>
+
+
+
+
+
+    <header>
+        <center>
+            <div id="dongho">
+            </div>
+        </center>
+
+        <div class="sdt">
+            Liên hệ: 0969141969
+        </div>
+        <div class="iconsdt">
+            <img src="image/phone2.png" alt="">
+        </div>
+        <div class="email">
+            Mail: phucvhps12860@fpt.edu.vn
+        </div>
+
+        <div class="iconemail">
+            <img src="image/mail2.png" alt="">
+        </div>
+
+
+
+    </header>
+    <nav>
+        <ul class="h-menu">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="gioithieu.html">Giới thiệu</a></li>
+            <li><a href="lienhe.html">Liên hệ</a></li>
+            <li><a href="sanpham.html">Sản phẩm</a></li>
+            <li><a href="spagiay.html">Spa giày</a></li>
+            <li><a href="sale.html">Sale</a></li>
+            <li><a href="tienich.html">Tiện ích</a></li>
+            <li><a href="giohang.html">Giỏ hàng</a></li>
+        </ul>
+    </nav>
+    <article>
+        <link rel="stylesheet"
+            href="https://www.google.com/maps/place/256,+8+Phan+Huy+%C3%8Dch,+Ph%C6%B0%E1%BB%9Dng+15,+T%C3%A2n+B%C3%ACnh,+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.8291094,106.6311751,17z/data=!3m1!4b1!4m5!3m4!1s0x3175297c43aada23:0x1cb0fb87e358efb9!8m2!3d10.8291041!4d106.6333638?hl=vi-VN">
+        <div class="gt">
+            <h2>CỬA HÀNG BÁN GIÀY SNEAKER REP 1:1/SIÊU CẤP TẠI HCM - HOÀNG PHÚC STORE GIỚI THIỆU</h2>
+        </div>
+        <div class="vb">
+            <p>
+                &nbsp Nỗi sợ vì mua phải giày kém chất lượng, từ nay không còn lo lắng nữa vì đã có #HOANGPHUCSTORE.VN:
+                hàng REP 1:1/SIÊU CẤP nhập, fullbox, nguyên tem <br> <br>
+                <center>
+                <img name="hinh" src="image/store.jpg" width="900px" height="600px" alt=""
+                onmouseover="over();"  onmouseout="out();"/> <br> <br>
+                </center>
+                &nbsp Cửa Hàng HOÀNG PHÚC STORE là một trong những nơi sưu tầm có khối lượng giày hiếm siêu khủng. Có
+                những mẫu giày cực kì hype được giới sưu tầm săn lùng,<br> thậm chí  bạn sẽ bắt gặp nhiều mẫu lạ mới mà
+                hiếm shop nào có. Có những mẫu chỉ có độc nhất 1 đôi. Ngoài ra những mẫu đang rất HOT trên thị trường
+                sneaker về liên<br> tục nên các bạn  cứ yên tâm không sợ hết hàng. <br> <br>
+
+                ⚡️ HOANGPHUCSTORE.VN ✓15 Ngày Đổi Hàng <br>
+                ✓Giao Hàng Miễn Phí <br>
+                ✓Thanh Toán Khi Nhận Hàng <br>
+                ✓Bảo Hành Hàng Chính Hãng Trọn Đời. <br><br>
+
+                ★★★★★★★★★★★★★★★★★★⇒ Thời Gian Giao Hàng <br>
+                ☑ Khu vực TP. Hồ Chí Minh: Miễn phí chi phí vận chuyển (Free ship). <br>
+                ☑ Khu vực Tỉnh : HOANGPHUCSTORE.VN hỗ trợ khách hàng 50k chi phí vận chuyển phát sinh từ các đơn vị vận
+                chuyển như: Giao Hàng Nhanh, VN Post, Viettel. <br> <br>
+                ⚡️ HOÀNG PHÚC STORE ship hàng toàn quốc COD- Kiểm tra hàng trước và thanh toán trực tiếp tại nhà. <br>
+                ⛔ Chính Sách Đổi Hàng HOANGPHUCSTORE⇒ Tất cả sản phẩm giày tại HOANGPHUCSTORE.VN được đổi hàng trong
+                vòng 15 ngày kể từ ngày nhận hàng khi<br> chưa qua  sử dụng còn full tag, hộp và kèm bill mua hàng.
+            </p>
+        </div>
+    </article>
+    <aside>
+        <ul class="vmenu">
+            <li><a href="sanpham.html">Nike</a></li>
+            <li><a href="sanpham.html">Adidas</a></li>
+            <li><a href="sanpham.html">Converse</a></li>
+            <li><a href="sanpham.html">Vans</a></li>
+            <li><a href="sanpham.html">New Balance</a></li>
+            <li><a href="sanpham.html">Prophere</a></li>
+            <li><a href="sanpham.html">Human</a></li>
+            <li><a href="sanpham.html">Ultra Boost</a></li>
+        </ul>
+    </aside>
+    <footer>
+        <div class="logo1">
+            <img src="image/logo1.png" alt="">
+        </div>
+
+        <div class="bct">
+            <img src="image/bct1.png" alt="">
+        </div>
+
+        <div class="htkh">
+            <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+            Chăm sóc khách hàng <br><br>
+            Thanh toán <br><br>
+            Hướng dẫn mua hàng <br>
+        </div>
+
+        <div class="cs">
+            <h3>CHÍNH SÁCH</h3>
+            Chế độ bảo hành <br><br>
+            Chính sách đổi hàng <br><br>
+            Bảo mật thông tin <br>
+        </div>
+
+        <div class="tnlh">
+            <h3>THÔNG TIN LIÊN HỆ</h3>
+            hoangphucsneaker.000webhostapp.com Trang Thông Tin Chính Thứ <br><br>
+            ⛪ Địa chỉ: 256/8, Phan Huy Ích, phường 12, Quận Gò Vấp, Thành phố Hồ Chí Minh <br><br>
+            Email : cskh.hoangphucsneaker.vn@gmail.com <br><br>
+            ☎️ Hotline Bán Hàng: 0969141969 <br><br>
+            ☎️ Hotline CSKH: 0372393505 <br>
+        </div>
+
+        <div class="cp ">
+            Copyright © 2020 hoangphucsneaker.000webhostapp.com
+        </div>
+    </footer>
+</body>
+
+</html>
